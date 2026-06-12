@@ -1,32 +1,163 @@
+/* ===== VARIABLES ===== */
+:root {
+    --color-navy-dark: #131F2E;
+    --color-navy-mid: #28374A;
+    --color-red: #722217;
+    --color-red-hover: #63271E;
+    --color-beige: #E9E8E3;
+    --color-beige-hover: #D4D2C7;
+    --color-grey: #969696;
+    --color-white: #FFFFFF;
+
+    --font-main: 'Libre Franklin', sans-serif;
+}
+
+/* ===== RESET ===== */
 *, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  color: #333;
+    font-family: var(--font-main);
+    background-color: var(--color-navy-dark);
+    color: var(--color-beige);
 }
 
-header {
-  padding: 1rem 2rem;
+/* ===== NAVBAR ===== */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 50px 100px;
 }
 
-nav a {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: inherit;
+.navbar__logo img {
+    display: block;
 }
 
-main {
-  padding: 2rem;
+.navbar__nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
-footer {
-  padding: 1rem 2rem;
-  text-align: center;
-  font-size: 0.875rem;
-  color: #666;
+.navbar__link {
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-beige);
+    text-decoration: none;
+    letter-spacing: 0;
+    transition: opacity 0.2s;
+}
+
+.navbar__link:hover {
+    opacity: 0.7;
+}
+
+/* Active nav link per page */
+.page-home .navbar__link[href="index.html"],
+.page-prices .navbar__link[href="prices.html"],
+.page-contacts .navbar__link[href="contacts.html"] {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    padding: 8px 20px;
+    transition: background-color 0.2s;
+}
+
+.btn--beige {
+    background-color: var(--color-beige);
+    color: var(--color-navy-dark);
+}
+
+.btn--beige:hover {
+    background-color: var(--color-beige-hover);
+}
+
+.btn--grey {
+    background-color: var(--color-grey);
+    color: var(--color-white);
+}
+
+/* ===== BURGER (mobile only) ===== */
+.navbar__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.navbar__burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-beige);
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(19, 31, 46, 0.6);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    padding: 340px 120px 0 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 52px;
+}
+
+.hero__title {
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 90px;
+    letter-spacing: -0.04em;
+    color: var(--color-beige);
+}
+
+.btn--red {
+    background-color: var(--color-red);
+    color: var(--color-beige);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px 40px;
+}
+
+.btn--red:hover {
+    background-color: var(--color-red-hover);
 }

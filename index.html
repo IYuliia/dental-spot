@@ -1,29 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dental Spot — Home</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Spot — Місце турботи про вашу усмішку</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- GTM head snippet -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W9674NZL');</script>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-home">
 
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="prices.html">Prices</a>
-      <a href="contacts.html">Contacts</a>
-    </nav>
-  </header>
+    <!-- GTM body snippet -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9674NZL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <main>
-    <h1>Welcome to Dental Spot</h1>
-  </main>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="navbar__logo">
+            <img src="assets/images/logo-white.svg" alt="Dental Spot" width="80">
+        </a>
+        <nav class="navbar__nav">
+            <a href="index.html" class="navbar__link">ПРО НАС</a>
+            <a href="prices.html" class="navbar__link">ЦІНИ</a>
+            <a href="contacts.html" class="navbar__link">КОНТАКТИ</a>
+            <button class="btn btn--beige" id="bookOnlineBtn">Book online</button>
+            <button class="btn btn--grey">UA</button>
+        </nav>
+        <button class="navbar__burger" id="burgerBtn" aria-label="Відкрити меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
 
-  <footer>
-    <p>&copy; 2026 Dental Spot</p>
-  </footer>
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="hero">
+          <div class="hero__content">
+            <h1 class="hero__title">DENTAL SPOT — МІСЦЕ ТУРБОТИ ПРО ВАШУ УСМІШКУ</h1>
+            <button class="btn btn--red" id="freeConsultationBtn">Free consultation</button>
+          </div>
+        </section>
+    </main>
 
-  <script src="js/main.js"></script>
+    <!-- MODAL -->
+    <div class="modal" id="bookingModal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <!-- Form coming soon -->
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
