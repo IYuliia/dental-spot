@@ -596,3 +596,7 @@ footer {
     height: 100%;
     border: 0;
 }
+
+.page-contacts footer {
+    background-color: var(--color-red-hover);
+}
