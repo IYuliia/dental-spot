@@ -161,3 +161,233 @@ body {
 .btn--red:hover {
     background-color: var(--color-red-hover);
 }
+
+/* ===== ABOUT ===== */
+.about {
+    background-color: var(--color-navy-mid);
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 211px;
+    align-items: flex-start;
+}
+
+.about__label {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-beige);
+    white-space: nowrap;
+    padding-top: 8px;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1029px;
+}
+
+.about__text p {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: -0.03em;
+    color: var(--color-beige);
+}
+
+/* ===== SERVICES ===== */
+.services {
+    background-color: var(--color-navy-mid);
+    padding: 0 100px 80px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.services__item {
+    display: grid;
+    grid-template-columns: 212px 1fr;
+    align-items: center;
+    padding: 64px 0;
+}
+
+.services__body {
+    display: grid;
+    grid-template-columns: 245px 1fr;
+    column-gap: 175px;
+    align-items: center;
+    border-top: 1px solid rgba(233, 232, 227, 0.3);
+    padding-top: 64px;
+    margin-top: -64px;
+    padding-bottom: 64px;
+    margin-bottom: -64px;
+}
+
+.services__item:last-child .services__body {
+    border-bottom: 1px solid rgba(233, 232, 227, 0.3);
+    padding-bottom: 64px;
+}
+
+.services__number {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--color-beige);
+}
+
+.services__name {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: -0.03em;
+    color: var(--color-beige);
+}
+
+.services__desc {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-beige);
+}
+
+/* ===== CTA ===== */
+.cta {
+    background-color: var(--color-navy-mid);
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    align-items: center;
+}
+
+.cta__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    width: 479px;
+}
+
+.cta__title {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 35px;
+    color: var(--color-beige);
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.cta__title-line {
+    display: block;
+}
+
+.cta__title-line--1 {
+    align-self: flex-start;
+}
+
+.cta__title-line--2 {
+    align-self: center;
+}
+
+.cta__title-line--3 {
+    align-self: flex-end;
+}
+
+.cta__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-beige);
+    margin-bottom: 88px;
+    text-align: right;
+}
+
+.btn--red.cta__btn {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.cta__right img {
+    width: 609px;
+    height: 342px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--color-navy-dark);
+    padding: 60px 100px 40px 100px;
+}
+
+.footer__top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 170px;
+    margin-bottom: 32px;
+}
+
+.footer__logo img {
+    display: block;
+    width: 39px;
+}
+
+.footer__columns {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    flex: 1;
+}
+
+.footer__col h4 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--color-beige);
+    margin-bottom: 4px;
+}
+
+.footer__col p,
+.footer__col a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-beige);
+    text-decoration: none;
+    display: block;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__legal {
+    display: flex;
+    gap: 24px;
+}
+
+.footer__legal a {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 35px;
+    color: var(--color-beige);
+    text-decoration: none;
+}
+
+.footer__legal a:hover {
+    opacity: 0.7;
+}
+
+.footer__copyright {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 35px;
+    color: var(--color-beige);
+}
