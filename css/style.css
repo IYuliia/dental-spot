@@ -129,7 +129,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(19, 31, 46, 0.6);
+    background-color: rgba(19, 31, 46, 0.7);
 }
 
 .hero__content {
@@ -155,7 +155,7 @@ body {
     background-color: var(--color-red);
     color: var(--color-beige);
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     padding: 8px 20px;
 }
 
@@ -174,13 +174,13 @@ body {
     padding: 80px 100px;
     display: flex;
     flex-direction: row;
-    gap: 211px;
+    gap: 116px;
     align-items: flex-start;
 }
 
 .about__label {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-beige);
     white-space: nowrap;
     padding-top: 8px;
@@ -194,7 +194,7 @@ body {
 }
 
 .about__text p {
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 500;
     line-height: 35px;
     letter-spacing: -0.03em;
@@ -235,7 +235,7 @@ body {
 
 .services__number {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 18px;
     color: var(--color-beige);
 }
@@ -262,7 +262,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 150px;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .cta__left {
@@ -311,9 +311,9 @@ body {
 }
 
 .btn--red.cta__btn {
-    padding: 8px 20px;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 20px;
+    padding: 18px 40px;
+    font-weight: 500px;
 }
 
 .cta__right img {
@@ -325,7 +325,7 @@ body {
 
 /* ===== FOOTER ===== */
 footer {
-    background-color: var(--color-navy-dark);
+    background-color: var(--color-navy-mid);
     padding: 60px 100px 40px 100px;
 }
 
@@ -403,16 +403,18 @@ footer {
 }
 
 /* ===== PRICES PAGE ===== */
+
 .page-prices {
     background-image: url('../assets/images/prices-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-color: var(--color-beige);
 }
 
-.page-prices main {
-    background: none;
+.page-prices main,
+.page-prices footer {
+    background-color: rgba(233, 232, 227, 0.7);
 }
 
 .hero--prices {
@@ -436,13 +438,13 @@ footer {
     background-color: var(--color-navy-mid);
     color: var(--color-beige);
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500px;
     padding: 8px 20px;
 }
 
 .hero__content .btn--navy {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     padding: 18px 40px;
 }
 
@@ -484,6 +486,14 @@ footer {
     white-space: nowrap;
 }
 
+.page-prices .cta__subtitle {
+    margin-bottom: 16px;
+}
+
+.page-prices .cta__address {
+    margin-bottom: 32px;
+}
+
 .cta__address {
     font-size: 20px;
     font-weight: 400;
@@ -496,6 +506,7 @@ footer {
     display: block;
     width: 609px;
     height: 342px;
+    filter: grayscale(100%);
 }
 
 .page-prices .cta {
@@ -511,9 +522,9 @@ footer {
     color: var(--color-navy-darkest);
 }
 
-.page-prices footer {
-    background-color: var(--color-beige);
-}
+/* .page-prices footer {
+    background-color: transparent;
+} */
 
 .page-prices footer h4,
 .page-prices footer p,
@@ -525,19 +536,18 @@ footer {
 /* ===== CONTACTS PAGE ===== */
 .hero--contacts {
     background-image: url('../assets/images/hero-bg-contacts.jpg');
-    /* background-color: #722217; */
     background-blend-mode: multiply;
 }
 
 .hero--contacts::after {
-    background-color: rgba(114, 34, 23, 0.2);
+    background-color: rgba(114, 34, 23, 0.15);
 }
-
 
 .hero__content .btn--beige {
     font-size: 20px;
     font-weight: 700;
     padding: 18px 40px;
+    color: var(--color-red);
 }
 
 .btn--outline:hover {
@@ -563,7 +573,7 @@ footer {
 
 .contacts-info__title {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 35px;
     letter-spacing: -0.03em;
     color: var(--color-beige);
@@ -595,8 +605,9 @@ footer {
     width: 100%;
     height: 100%;
     border: 0;
+    filter: grayscale(100%);
 }
 
 .page-contacts footer {
-    background-color: var(--color-red-hover);
+    background-color: var(--color-red);
 }
