@@ -774,3 +774,63 @@ footer {
     border-color: #4a7c59;
     border-width: 1.5px;
 }
+
+/* ===== LEGAL PAGES ===== */
+.legal__hero {
+    padding: 280px 100px 80px 100px;
+    background-color: var(--color-navy-mid);
+}
+
+.legal__title {
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 80px;
+    letter-spacing: -0.04em;
+    color: var(--color-beige);
+}
+
+.legal__body {
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 900px;
+}
+
+.legal__section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-beige);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.legal__section p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--color-beige);
+    margin-bottom: 12px;
+}
+
+.legal__section ul {
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.legal__section ul li {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-beige);
+    margin-bottom: 4px;
+}
+
+.legal__section a {
+    color: var(--color-beige);
+    text-decoration: underline;
+}
+
+.legal__section a:hover {
+    opacity: 0.7;
+}
