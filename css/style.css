@@ -761,3 +761,16 @@ footer {
     75% { opacity: 1; }
     100% { opacity: 0; }
 }
+
+/* ===== FORM VALIDATION STATES ===== */
+.modal__field input.invalid,
+.modal__field select.invalid {
+    border-color: var(--color-red);
+    border-width: 1.5px;
+}
+
+.modal__field input.valid,
+.modal__field select.valid {
+    border-color: #4a7c59;
+    border-width: 1.5px;
+}

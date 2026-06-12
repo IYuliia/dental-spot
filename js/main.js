@@ -1,34 +1,3 @@
-// // ===== MODAL =====
-// const modal = document.getElementById('bookingModal');
-// const modalOverlay = document.getElementById('modalOverlay');
-// const modalClose = document.getElementById('modalClose');
-
-// const bookBtns = document.querySelectorAll('.book-online-trigger');
-
-// bookBtns.forEach(btn => {
-//     btn.addEventListener('click', () => {
-//         modal.classList.add('is-open');
-//         // document.body.style.overflow = 'hidden';
-//     });
-// });
-
-// modalOverlay.addEventListener('click', () => {
-//     modal.classList.remove('is-open');
-//     // document.body.style.overflow = '';
-// });
-
-// modalClose.addEventListener('click', () => {
-//     modal.classList.remove('is-open');
-//     // document.body.style.overflow = '';
-// });
-
-// document.addEventListener('keydown', (e) => {
-//     if (e.key === 'Escape') {
-//         modal.classList.remove('is-open');
-//         // document.body.style.overflow = '';
-//     }
-// });
-
 // ===== MODAL =====
 const modal = document.getElementById('bookingModal');
 const modalOverlay = document.getElementById('modalOverlay');
@@ -70,9 +39,22 @@ function validateForm() {
 
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
     const phoneValid = phone.value.replace(/\D/g, '').length >= 10;
-    const allFilled = name.value.trim() && service.value && email.value.trim() && phone.value.trim();
 
+    // Only show red/green if the field has been touched
+    function markField(el, isValid) {
+        if (el.value.trim() === '' && !el.classList.contains('touched')) return;
+        el.classList.toggle('valid', isValid);
+        el.classList.toggle('invalid', !isValid);
+    }
+
+    markField(name, name.value.trim().length > 0);
+    markField(service, service.value !== '');
+    markField(email, emailValid);
+    markField(phone, phoneValid);
+
+    const allFilled = name.value.trim() && service.value && email.value.trim() && phone.value.trim();
     const isValid = allFilled && emailValid && phoneValid && consent.checked;
+
     submitBtn.disabled = !isValid;
     submitBtn.style.opacity = isValid ? '1' : '0.5';
     submitBtn.style.cursor = isValid ? 'pointer' : 'not-allowed';
@@ -81,6 +63,9 @@ function validateForm() {
 function resetForm() {
     if (!form) return;
     form.reset();
+    form.querySelectorAll('input, select').forEach(el => {
+        el.classList.remove('touched', 'valid', 'invalid');
+    });
     validateForm();
 }
 
@@ -125,6 +110,13 @@ if (form) {
             alert('Помилка з\'єднання. Спробуйте ще раз.');
         }
     });
+
+    form.querySelectorAll('input, select').forEach(el => {
+    el.addEventListener('blur', () => {
+        el.classList.add('touched');
+        validateForm();
+    });
+});
 }
 
 // ===== SUCCESS MESSAGE =====
