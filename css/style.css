@@ -611,3 +611,132 @@ footer {
 .page-contacts footer {
     background-color: var(--color-red);
 }
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 0;
+    overflow-y: auto;
+}
+
+.modal.is-open {
+    display: flex;
+}
+
+.modal__overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(19, 31, 46, 0.6);
+}
+
+.modal__content {
+    position: relative;
+    z-index: 1;
+    background-color: #E9E8E3;
+    padding: 62px 77px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.modal__close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-navy-darkest);
+    line-height: 1;
+}
+
+.modal__title {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 35px;
+    color: var(--color-navy-darkest);
+    text-transform: uppercase;
+}
+
+.modal__title span {
+    display: block;
+    text-align: right;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.modal__field label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-navy-darkest);
+    text-transform: uppercase;
+}
+
+.modal__field input,
+.modal__field select {
+    font-family: var(--font-main);
+    font-size: 14px;
+    width: 100%;
+    height: 45px;
+    border: 0.8px solid #001B2F;
+    background: transparent;
+    padding: 0 12px;
+    color: var(--color-navy-darkest);
+    appearance: none;
+}
+
+.modal__field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23001B2F' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+.modal__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.modal__checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--color-navy-darkest);
+}
+
+.modal__checkbox label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--color-navy-darkest);
+    cursor: pointer;
+}
+
+.modal__submit {
+    width: 100%;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 8px;
+}

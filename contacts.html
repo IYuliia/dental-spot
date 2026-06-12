@@ -26,7 +26,7 @@
             <a href="index.html" class="navbar__link">ПРО НАС</a>
             <a href="prices.html" class="navbar__link">ЦІНИ</a>
             <a href="contacts.html" class="navbar__link">КОНТАКТИ</a>
-            <button class="btn btn--beige" id="bookOnlineBtn">Book online</button>
+            <button class="btn btn--beige book-online-trigger" id="bookOnlineBtn">Book online</button>
             <button class="btn btn--grey">UA</button>
         </nav>
         <button class="navbar__burger" id="burgerBtn" aria-label="Відкрити меню">
@@ -41,7 +41,7 @@
         <section class="hero hero--contacts">
             <div class="hero__content">
                 <h1 class="hero__title">ЗВ'ЯЖІТЬСЯ З НАМИ<br>У ЗРУЧНИЙ СПОСІБ</h1>
-                <button class="btn btn--beige" id="bookOnlineBtn2">Записатись на прийом</button>
+                <button class="btn btn--beige book-online-trigger" id="bookOnlineBtn2">Записатись на прийом</button>
             </div>
         </section>
 
@@ -119,10 +119,49 @@
         </div>
     </footer>
 
-    <div class="modal" id="bookingModal">
-        <div class="modal__overlay" id="modalOverlay"></div>
-        <div class="modal__content"></div>
+   <div class="modal" id="bookingModal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__content">
+        <button class="modal__close" id="modalClose">&times;</button>
+        <h2 class="modal__title">[ ПОДБАЙМО<br><span>ПРО ВАШУ УСМІШКУ ]</span></h2>
+        <form class="modal__form" id="bookingForm">
+            <div class="modal__field">
+                <label for="name">ІМ'Я ТА ПРІЗВИЩЕ</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="modal__field">
+                <label for="service">ТИП ЗВЕРНЕННЯ</label>
+                <select id="service" name="service">
+                    <option value="" disabled selected>ОБЕРІТЬ ПОСЛУГУ</option>
+                    <option value="consultation">Консультація</option>
+                    <option value="hygiene">Професійна гігієна</option>
+                    <option value="caries">Лікування карієсу</option>
+                    <option value="endodontics">Ендодонтичне лікування</option>
+                    <option value="whitening">Відбілювання</option>
+                    <option value="braces">Брекет-система</option>
+                    <option value="extraction">Видалення зуба</option>
+                    <option value="crown">Коронка</option>
+                    <option value="veneer">Керамічний вінір</option>
+                    <option value="implant">Імплантація</option>
+                    <option value="other">Інше</option>
+                </select>
+            </div>
+            <div class="modal__field">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="modal__field">
+                <label for="phone">НОМЕР ТЕЛЕФОНУ</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="modal__checkbox">
+                <input type="checkbox" id="consent" name="consent">
+                <label for="consent">Я погоджуюсь на обробку персональних даних відповідно до політики конфіденційності</label>
+            </div>
+            <button type="submit" class="btn btn--red modal__submit">Записатись</button>
+        </form>
     </div>
+</div>
 
     <script src="js/main.js"></script>
 </body>

@@ -34,7 +34,7 @@
             <a href="index.html" class="navbar__link">ПРО НАС</a>
             <a href="prices.html" class="navbar__link">ЦІНИ</a>
             <a href="contacts.html" class="navbar__link">КОНТАКТИ</a>
-            <button class="btn btn--beige" id="bookOnlineBtn">Book online</button>
+            <button class="btn btn--beige book-online-trigger" id="bookOnlineBtn">Book online</button>
             <button class="btn btn--grey">UA</button>
         </nav>
         <button class="navbar__burger" id="burgerBtn" aria-label="Відкрити меню">
@@ -50,7 +50,7 @@
         <section class="hero">
           <div class="hero__content">
             <h1 class="hero__title">DENTAL SPOT — МІСЦЕ ТУРБОТИ ПРО ВАШУ УСМІШКУ</h1>
-            <button class="btn btn--red" id="freeConsultationBtn">Записатись на прийом</button>
+            <button class="btn btn--red book-online-trigger" id="freeConsultationBtn">Записатись на прийом</button>
           </div>
         </section>
         <!-- ABOUT -->
@@ -108,7 +108,7 @@
     <span class="cta__title-line cta__title-line--3">УСМІШКУ ]</span>
 </h2>
         <p class="cta__subtitle">Сучасна стоматологія для дітей і дорослих</p>
-        <button class="btn btn--red cta__btn">Book online</button>
+        <button class="btn btn--red cta__btn book-online-trigger">Book online</button>
     </div>
     <div class="cta__right">
         <img src="assets/images/clinic-interior.jpg" alt="Dental Spot interior">
@@ -156,8 +156,45 @@
     <div class="modal" id="bookingModal">
         <div class="modal__overlay" id="modalOverlay"></div>
         <div class="modal__content">
-            <!-- Form coming soon -->
+    <button class="modal__close" id="modalClose">&times;</button>
+    <h2 class="modal__title">[ ПОДБАЙМО<br><span>ПРО ВАШУ УСМІШКУ ]</span></h2>
+    <form class="modal__form" id="bookingForm">
+        <div class="modal__field">
+            <label for="name">ІМ'Я ТА ПРІЗВИЩЕ</label>
+            <input type="text" id="name" name="name">
         </div>
+        <div class="modal__field">
+            <label for="service">ТИП ЗВЕРНЕННЯ</label>
+            <select id="service" name="service">
+                <option value="" disabled selected>ОБЕРІТЬ ПОСЛУГУ</option>
+                <option value="hygiene">Консультація</option>
+                <option value="hygiene">Професійна гігієна</option>
+                <option value="hygiene">Лікування карієсу</option>
+                <option value="hygiene">Ендодонтичне лікування</option>
+                <option value="hygiene">Відбілювання</option>
+                <option value="therapy">Брекет-система</option>
+                <option value="endodontics">Видалення зуба</option>
+                <option value="orthopedics">Коронка</option>
+                <option value="implants">Керамічний вінір</option>
+                <option value="whitening">Імплантація</option>
+                <option value="whitening">Інше</option>
+            </select>
+        </div>
+        <div class="modal__field">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="modal__field">
+            <label for="phone">НОМЕР ТЕЛЕФОНУ</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="modal__checkbox">
+            <input type="checkbox" id="consent" name="consent">
+            <label for="consent">Я погоджуюсь на обробку персональних даних відповідно до політики конфіденційності</label>
+        </div>
+        <button type="submit" class="btn btn--red modal__submit">Записатись</button>
+    </form>
+</div>
     </div>
 
     <script src="js/main.js"></script>
