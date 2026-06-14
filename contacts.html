@@ -12,6 +12,7 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W9674NZL');</script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-contacts">
@@ -29,12 +30,30 @@
             <button class="btn btn--beige book-online-trigger" id="bookOnlineBtn">Book online</button>
             <button class="btn btn--grey">UA</button>
         </nav>
-        <button class="navbar__burger" id="burgerBtn" aria-label="Відкрити меню">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+       <button class="navbar__burger" id="burgerBtn" aria-label="Відкрити меню">
+    МЕНЮ <i class="ri-menu-line"></i>
+</button>
     </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__top">
+        <a href="index.html" class="navbar__logo">
+            <img src="assets/images/logo-white.svg" alt="Dental Spot" width="32">
+        </a>
+        <button class="mobile-menu__close" id="mobileMenuClose">
+            МЕНЮ <i class="ri-close-line"></i>
+        </button>
+    </div>
+    <nav class="mobile-menu__nav">
+        <a href="index.html">ПРО НАС</a>
+        <a href="prices.html">ЦІНИ</a>
+        <a href="contacts.html">КОНТАКТИ</a>
+    </nav>
+    <div class="mobile-menu__buttons">
+        <button class="btn btn--beige book-online-trigger">Book online</button>
+        <button class="btn btn--grey">UA</button>
+    </div>
+</div>
 
     <main>
         <!-- HERO -->
@@ -118,52 +137,6 @@
             <p class="footer__copyright">© 2026 Dental Spot, All Rights Reserved</p>
         </div>
     </footer>
-
-   <!-- <div class="modal" id="bookingModal">
-    <div class="modal__overlay" id="modalOverlay"></div>
-    <div class="modal__content">
-        <button class="modal__close" id="modalClose">&times;</button>
-        <h2 class="modal__title">[ ПОДБАЙМО<br><span>ПРО ВАШУ УСМІШКУ ]</span></h2>
-        <form class="modal__form" id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="950d30e5-a6d5-48df-b556-68225563b9ba">
-    <input type="hidden" name="subject" value="Новий запис — Dental Spot">
-            <div class="modal__field">
-                <label for="name">ІМ'Я ТА ПРІЗВИЩЕ</label>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="modal__field">
-                <label for="service">ТИП ЗВЕРНЕННЯ</label>
-                <select id="service" name="service">
-    <option value="" disabled selected>ОБЕРІТЬ ПОСЛУГУ</option>
-    <option value="Консультація">Консультація</option>
-    <option value="Професійна гігієна">Професійна гігієна</option>
-    <option value="Лікування карієсу">Лікування карієсу</option>
-    <option value="Ендодонтичне лікування">Ендодонтичне лікування</option>
-    <option value="Відбілювання">Відбілювання</option>
-    <option value="Брекет-система">Брекет-система</option>
-    <option value="Видалення зуба">Видалення зуба</option>
-    <option value="Коронка">Коронка</option>
-    <option value="Керамічний вінір">Керамічний вінір</option>
-    <option value="Імплантація">Імплантація</option>
-    <option value="Інше">Інше</option>
-</select>
-            </div>
-            <div class="modal__field">
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email">
-            </div>
-            <div class="modal__field">
-                <label for="phone">НОМЕР ТЕЛЕФОНУ</label>
-                <input type="tel" id="phone" name="phone">
-            </div>
-            <div class="modal__checkbox">
-                <input type="checkbox" id="consent" name="consent">
-                <label for="consent">Я погоджуюсь на обробку персональних даних відповідно до політики конфіденційності</label>
-            </div>
-            <button type="submit" class="btn btn--red modal__submit">Записатись</button>
-        </form>
-    </div>
-</div> -->
 
 <!-- MODAL -->
     <div id="modalContainer"></div>

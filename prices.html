@@ -12,6 +12,7 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W9674NZL');</script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-prices">
@@ -29,12 +30,30 @@
             <button class="btn btn--red book-online-trigger" id="bookOnlineBtn">Book online</button>
             <button class="btn btn--grey">UA</button>
         </nav>
-        <button class="navbar__burger" id="burgerBtn" aria-label="Відкрити меню">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+<button class="navbar__burger" id="burgerBtn" aria-label="Відкрити меню">
+    МЕНЮ <i class="ri-menu-line"></i>
+</button>
     </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__top">
+        <a href="index.html" class="navbar__logo">
+            <img src="assets/images/logo-white.svg" alt="Dental Spot" width="32">
+        </a>
+        <button class="mobile-menu__close" id="mobileMenuClose">
+            МЕНЮ <i class="ri-close-line"></i>
+        </button>
+    </div>
+    <nav class="mobile-menu__nav">
+        <a href="index.html">ПРО НАС</a>
+        <a href="prices.html">ЦІНИ</a>
+        <a href="contacts.html">КОНТАКТИ</a>
+    </nav>
+    <div class="mobile-menu__buttons">
+        <button class="btn btn--beige book-online-trigger">Book online</button>
+        <button class="btn btn--grey">UA</button>
+    </div>
+</div>
 
     <main>
         <!-- HERO -->

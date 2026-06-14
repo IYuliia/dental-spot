@@ -127,3 +127,20 @@ function showSuccess() {
     document.body.appendChild(msg);
     setTimeout(() => msg.remove(), 4000);
 }
+
+// ===== MOBILE MENU =====
+const mobileMenu = document.getElementById('mobileMenu');
+const burgerBtn = document.getElementById('burgerBtn');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+if (burgerBtn) {
+    burgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('is-open');
+    });
+}
+
+if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-open');
+    });
+}
