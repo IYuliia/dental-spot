@@ -51,7 +51,7 @@ body {
 
 .navbar__link {
     font-family: var(--font-main);
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
     color: var(--color-beige);
     text-decoration: none;
@@ -74,7 +74,7 @@ body {
 /* ===== BUTTONS ===== */
 .btn {
     font-family: var(--font-main);
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     border: none;
     cursor: pointer;
@@ -143,8 +143,9 @@ body {
     gap: 52px;
 }
 
+/* 42px @ 768px → 75px @ 1440px */
 .hero__title {
-    font-size: 75px;
+    font-size: clamp(2.625rem, 4.911vw + 0.268rem, 4.6875rem);
     font-weight: 500;
     line-height: 90px;
     letter-spacing: -0.04em;
@@ -154,13 +155,14 @@ body {
 .btn--red {
     background-color: var(--color-red);
     color: var(--color-beige);
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     padding: 8px 20px;
 }
 
+/* 14px @ 768px → 20px @ 1440px */
 .hero__content .btn--red {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     padding: 18px 40px;
 }
 
@@ -179,7 +181,7 @@ body {
 }
 
 .about__label {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     color: var(--color-beige);
     white-space: nowrap;
@@ -193,8 +195,9 @@ body {
     max-width: 1029px;
 }
 
+/* 16px @ 768px → 32px @ 1440px */
 .about__text p {
-    font-size: 32px;
+    font-size: clamp(1rem, 2.381vw - 0.143rem, 2rem);
     font-weight: 500;
     line-height: 35px;
     letter-spacing: -0.03em;
@@ -233,23 +236,26 @@ body {
     padding-bottom: 64px;
 }
 
+/* 14px @ 768px → 20px @ 1440px */
 .services__number {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     font-weight: 500;
     line-height: 18px;
     color: var(--color-beige);
 }
 
+/* 20px @ 768px → 35px @ 1440px */
 .services__name {
-    font-size: 35px;
+    font-size: clamp(1.25rem, 2.232vw + 0.179rem, 2.1875rem);
     font-weight: 700;
     line-height: 35px;
     letter-spacing: -0.03em;
     color: var(--color-beige);
 }
 
+/* 14px @ 768px → 20px @ 1440px */
 .services__desc {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     font-weight: 400;
     line-height: 20px;
     color: var(--color-beige);
@@ -273,8 +279,9 @@ body {
     width: 479px;
 }
 
+/* 16px @ 768px → 35px @ 1440px */
 .cta__title {
-    font-size: 35px;
+    font-size: clamp(1rem, 2.827vw - 0.357rem, 2.1875rem);
     font-weight: 400;
     line-height: 35px;
     color: var(--color-beige);
@@ -301,8 +308,9 @@ body {
     align-self: flex-end;
 }
 
+/* 14px @ 768px → 20px @ 1440px */
 .cta__subtitle {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     font-weight: 400;
     line-height: 20px;
     color: var(--color-beige);
@@ -311,7 +319,7 @@ body {
 }
 
 .btn--red.cta__btn {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     padding: 18px 40px;
     font-weight: 500;
 }
@@ -349,8 +357,9 @@ footer {
     flex: 1;
 }
 
+/* 12px @ 768px → 14px @ 1440px */
 .footer__col h4 {
-    font-size: 14px;
+    font-size: clamp(0.75rem, 0.298vw + 0.607rem, 0.875rem);
     font-weight: 700;
     line-height: 20px;
     color: var(--color-beige);
@@ -359,7 +368,7 @@ footer {
 
 .footer__col p,
 .footer__col a {
-    font-size: 14px;
+    font-size: clamp(0.75rem, 0.298vw + 0.607rem, 0.875rem);
     font-weight: 400;
     line-height: 20px;
     color: var(--color-beige);
@@ -384,8 +393,9 @@ footer {
     gap: 24px;
 }
 
+/* 8px @ 768px → 10px @ 1440px */
 .footer__legal a {
-    font-size: 10px;
+    font-size: clamp(0.5rem, 0.298vw + 0.357rem, 0.625rem);
     font-weight: 400;
     line-height: 35px;
     color: var(--color-beige);
@@ -397,7 +407,7 @@ footer {
 }
 
 .footer__copyright {
-    font-size: 10px;
+    font-size: clamp(0.5rem, 0.298vw + 0.357rem, 0.625rem);
     font-weight: 400;
     line-height: 35px;
     color: var(--color-beige);
@@ -437,13 +447,13 @@ footer {
 .btn--navy {
     background-color: var(--color-navy-mid);
     color: var(--color-beige);
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     padding: 8px 20px;
 }
 
 .hero__content .btn--navy {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     font-weight: 500;
     padding: 18px 40px;
 }
@@ -469,8 +479,9 @@ footer {
     align-items: center;
 }
 
+/* 14px @ 768px → 20px @ 1440px */
 .prices-grid__name {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     font-weight: 500;
     line-height: 20px;
     letter-spacing: -0.03em;
@@ -478,7 +489,7 @@ footer {
 }
 
 .prices-grid__price {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     font-weight: 800;
     line-height: 20px;
     letter-spacing: -0.03em;
@@ -495,7 +506,7 @@ footer {
 }
 
 .cta__address {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     font-weight: 400;
     line-height: 24px;
     color: var(--color-red);
@@ -540,7 +551,7 @@ footer {
 }
 
 .hero__content .btn--beige {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     font-weight: 600;
     padding: 18px 40px;
     color: var(--color-red);
@@ -567,16 +578,18 @@ footer {
     flex: 1;
 }
 
+/* 16px @ 768px → 35px @ 1440px */
 .contacts-info__title {
-    font-size: 35px;
+    font-size: clamp(1rem, 2.827vw - 0.357rem, 2.1875rem);
     font-weight: 400;
     line-height: 35px;
     letter-spacing: -0.03em;
     color: var(--color-beige);
 }
 
+/* 16px @ 768px → 20px @ 1440px */
 .contacts-info__block h3 {
-    font-size: 20px;
+    font-size: clamp(1rem, 0.595vw + 0.714rem, 1.25rem);
     font-weight: 700;
     line-height: 24px;
     color: var(--color-beige);
@@ -584,7 +597,7 @@ footer {
 }
 
 .contacts-info__block p {
-    font-size: 20px;
+    font-size: clamp(1rem, 0.595vw + 0.714rem, 1.25rem);
     font-weight: 400;
     line-height: 28px;
     color: var(--color-beige);
@@ -647,14 +660,15 @@ footer {
     right: 20px;
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 1.5rem;
     cursor: pointer;
     color: var(--color-navy-darkest);
     line-height: 1;
 }
 
+/* 24px @ 768px → 35px @ 1440px */
 .modal__title {
-    font-size: 35px;
+    font-size: clamp(1.5rem, 1.637vw + 0.714rem, 2.1875rem);
     font-weight: 500;
     line-height: 35px;
     color: var(--color-navy-darkest);
@@ -679,7 +693,7 @@ footer {
 }
 
 .modal__field label {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--color-navy-darkest);
     text-transform: uppercase;
@@ -688,7 +702,7 @@ footer {
 .modal__field input,
 .modal__field select {
     font-family: var(--font-main);
-    font-size: 14px;
+    font-size: 0.875rem;
     width: 100%;
     height: 45px;
     border: 0.8px solid #001B2F;
@@ -722,17 +736,18 @@ footer {
 }
 
 .modal__checkbox label {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
     line-height: 16px;
     color: var(--color-navy-darkest);
     cursor: pointer;
 }
 
+/* 16px @ 768px → 20px @ 1440px */
 .modal__submit {
     width: 100%;
     padding: 18px;
-    font-size: 20px;
+    font-size: clamp(1rem, 0.595vw + 0.714rem, 1.25rem);
     font-weight: 500;
     margin-top: 8px;
 }
@@ -746,7 +761,7 @@ footer {
     background-color: var(--color-navy-dark);
     color: var(--color-beige);
     padding: 16px 32px;
-    font-size: 16px;
+    font-size: 1rem;
     z-index: 2000;
     animation: fadeInOut 4s ease forwards;
 }
@@ -777,8 +792,9 @@ footer {
     background-color: var(--color-navy-mid);
 }
 
+/* 42px @ 768px → 75px @ 1440px */
 .legal__title {
-    font-size: 75px;
+    font-size: clamp(2.625rem, 4.911vw + 0.268rem, 4.6875rem);
     font-weight: 500;
     line-height: 80px;
     letter-spacing: -0.04em;
@@ -794,7 +810,7 @@ footer {
 }
 
 .legal__section h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--color-beige);
     margin-bottom: 16px;
@@ -803,7 +819,7 @@ footer {
 }
 
 .legal__section p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 26px;
     color: var(--color-beige);
@@ -816,7 +832,7 @@ footer {
 }
 
 .legal__section ul li {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 26px;
     color: var(--color-beige);
     margin-bottom: 4px;
@@ -862,8 +878,9 @@ footer {
     gap: 0;
 }
 
+/* 120px @ 768px → 250px @ 1440px */
 .not-found__number {
-    font-size: 250px;
+    font-size: clamp(7.5rem, 19.345vw - 1.786rem, 15.625rem);
     font-weight: 500;
     line-height: 250px;
     color: var(--color-navy-darkest);
@@ -871,16 +888,18 @@ footer {
     margin-top: 120px;
 }
 
+/* 20px @ 768px → 35px @ 1440px */
 .not-found__label {
-    font-size: 35px;
+    font-size: clamp(1.25rem, 2.232vw + 0.179rem, 2.1875rem);
     font-weight: 400;
     line-height: 35px;
     color: var(--color-navy-darkest);
     margin-bottom: 64px;
 }
 
+/* 14px @ 768px → 20px @ 1440px */
 .not-found__btn {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.893vw + 0.446rem, 1.25rem);
     font-weight: 700;
     padding: 18px 40px;
     text-decoration: none;
@@ -921,7 +940,7 @@ footer {
         background: none;
         border: none;
         color: var(--color-beige);
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 400;
         font-family: var(--font-main);
         text-transform: uppercase;
@@ -930,7 +949,7 @@ footer {
     }
 
     .navbar__burger i {
-        font-size: 20px;
+        font-size: 1.25rem;
         color: var(--color-beige);
         display: block;
     }
@@ -974,14 +993,14 @@ footer {
         background: none;
         border: none;
         color: var(--color-beige);
-        font-size: 14px;
+        font-size: 0.875rem;
         font-family: var(--font-main);
         text-transform: uppercase;
         cursor: pointer;
     }
 
     .mobile-menu__close i {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .mobile-menu__nav {
@@ -993,7 +1012,7 @@ footer {
     }
 
     .mobile-menu__nav a {
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 400;
         color: var(--color-beige);
         text-decoration: none;
@@ -1051,7 +1070,6 @@ footer {
     }
 
     .hero__title {
-        font-size: 42px;
         line-height: 44px;
         letter-spacing: -0.05em;
     }
@@ -1059,7 +1077,6 @@ footer {
     .hero__content .btn--red,
     .hero__content .btn--beige,
     .hero__content .btn--navy {
-        font-size: 14px;
         font-weight: 700;
         padding: 8px 20px;
     }
@@ -1071,16 +1088,11 @@ footer {
         gap: 18px;
     }
 
-    .about__label {
-        font-size: 20px;
-    }
-
     .about__text {
         gap: 18px;
     }
 
     .about__text p {
-        font-size: 16px;
         line-height: 16px;
         letter-spacing: -0.03em;
         text-align: justify;
@@ -1112,20 +1124,17 @@ footer {
     }
 
     .services__number {
-        font-size: 14px;
         line-height: 20px;
         padding-top: 24px;
         padding-bottom: 0;
     }
 
     .services__name {
-        font-size: 20px;
         line-height: 20px;
         letter-spacing: -0.03em;
     }
 
     .services__desc {
-        font-size: 14px;
         line-height: 16px;
         letter-spacing: -0.03em;
     }
@@ -1148,7 +1157,6 @@ footer {
     }
 
     .cta__title {
-        font-size: 16px;
         line-height: 16px;
         margin-bottom: 0;
         grid-column: 1;
@@ -1169,7 +1177,6 @@ footer {
     }
 
     .cta__subtitle {
-        font-size: 14px;
         line-height: 14px;
         text-align: left;
         margin-bottom: 0;
@@ -1182,7 +1189,6 @@ footer {
     }
 
     .btn--red.cta__btn {
-        font-size: 14px;
         padding: 8px 20px;
         align-self: start;
         grid-column: 2;
@@ -1220,14 +1226,11 @@ footer {
     }
 
     .footer__col h4 {
-        font-size: 12px;
-        font-weight: 700;
         line-height: 18px;
     }
 
     .footer__col p,
     .footer__col a {
-        font-size: 12px;
         line-height: 18px;
         white-space: normal; /* allow wrapping on mobile — columns are narrow */
     }
@@ -1242,11 +1245,6 @@ footer {
 
     .footer__legal {
         gap: 16px;
-    }
-
-    .footer__legal a,
-    .footer__copyright {
-        font-size: 8px;
     }
 
     /* PRICES PAGE */
@@ -1267,14 +1265,11 @@ footer {
     }
 
     .prices-grid__name {
-        font-size: 14px;
         line-height: 20px;
         letter-spacing: -0.03em;
     }
 
     .prices-grid__price {
-        font-size: 14px;
-        font-weight: 800;
         line-height: 20px;
         letter-spacing: -0.03em;
     }
@@ -1295,20 +1290,13 @@ footer {
         gap: 24px;
     }
 
-    .contacts-info__title {
-        font-size: 16px;
-        line-height: 35px;
-    }
-
     .contacts-info__block h3 {
-        font-size: 16px;
         font-weight: 500;
         line-height: 20px;
         margin-bottom: 4px;
     }
 
     .contacts-info__block p {
-        font-size: 16px;
         font-weight: 300;
         line-height: 20px;
     }
@@ -1324,7 +1312,6 @@ footer {
     }
 
     .legal__title {
-        font-size: 42px;
         line-height: 48px;
     }
 
@@ -1348,19 +1335,16 @@ footer {
     }
 
     .not-found__number {
-        font-size: 120px;
         line-height: 120px;
         margin-top: 0;
     }
 
     .not-found__label {
-        font-size: 20px;
         line-height: 24px;
         margin-bottom: 0;
     }
 
     .not-found__btn {
-        font-size: 14px;
         padding: 8px 20px;
         margin-top: 300px;
     }
@@ -1377,12 +1361,10 @@ footer {
     }
 
     .modal__title {
-        font-size: 24px;
         line-height: 28px;
     }
 
     .modal__submit {
-        font-size: 16px;
         padding: 14px;
     }
 
@@ -1406,7 +1388,6 @@ footer {
     }
 
     .hero__title {
-        font-size: 52px;
         line-height: 60px;
     }
 
@@ -1417,7 +1398,6 @@ footer {
     }
 
     .about__text p {
-        font-size: 24px;
         line-height: 28px;
     }
 
@@ -1443,12 +1423,10 @@ footer {
     }
 
     .services__name {
-        font-size: 24px;
         line-height: 24px;
     }
 
     .services__desc {
-        font-size: 16px;
         line-height: 20px;
     }
 
@@ -1463,19 +1441,16 @@ footer {
     }
 
     .cta__title {
-        font-size: 24px;
         line-height: 24px;
         margin-bottom: 20px;
     }
 
     .cta__subtitle {
-        font-size: 16px;
         line-height: 20px;
         margin-bottom: 48px;
     }
 
     .btn--red.cta__btn {
-        font-size: 16px;
         padding: 14px 28px;
     }
 
@@ -1514,7 +1489,7 @@ footer {
     }
 
     .footer__columns {
-        gap: 40px; 
+        gap: 40px;
     }
 
     /* LEGAL */
