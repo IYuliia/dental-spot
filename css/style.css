@@ -406,8 +406,8 @@ footer {
 
 .page-prices {
     background-image: url('../assets/images/prices-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: 127% auto;
+    background-position: center top;
     background-repeat: no-repeat;
     background-color: var(--color-beige);
 }
@@ -521,10 +521,6 @@ footer {
 .page-prices .cta__title-line {
     color: var(--color-navy-darkest);
 }
-
-/* .page-prices footer {
-    background-color: transparent;
-} */
 
 .page-prices footer h4,
 .page-prices footer p,
@@ -833,4 +829,60 @@ footer {
 
 .legal__section a:hover {
     opacity: 0.7;
+}
+
+/* ===== 404 PAGE ===== */
+.page-404 {
+    background-color: var(--color-beige);
+}
+
+.page-404 footer {
+    background-color: var(--color-beige);
+}
+
+.page-404 footer h4,
+.page-404 footer p,
+.page-404 footer a,
+.page-404 .footer__copyright {
+    color: var(--color-navy-darkest);
+}
+
+.not-found {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.not-found__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.not-found__number {
+    font-size: 250px;
+    font-weight: 500;
+    line-height: 250px;
+    color: var(--color-navy-darkest);
+    letter-spacing: -0.04em;
+    margin-top: 120px;
+}
+
+.not-found__label {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 35px;
+    color: var(--color-navy-darkest);
+    margin-bottom: 64px;
+}
+
+.not-found__btn {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px 40px;
+    text-decoration: none;
+    display: inline-block;
 }
