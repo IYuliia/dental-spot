@@ -1250,4 +1250,189 @@ footer {
     font-size: 8px;
 }
 
+/* PRICES PAGE */
+
+.hero--contacts {
+    background-position: left center;
+}
+
+.prices-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 40px 20px;
+}
+
+.prices-grid__item {
+    padding: 16px 20px;
+    background-color: var(--color-beige-hover);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.prices-grid__name {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+}
+
+.prices-grid__price {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+}
+
+.page-prices .cta__address {
+    display: none;
+}
+
+/* CONTACTS INFO */
+.contacts-info{
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.contacts-info__left {
+    gap: 24px;
+}
+
+.contacts-info__title {
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.contacts-info__block h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.contacts-info__block p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.contacts-info__right {
+    width: 100%;
+    height: 200px;
+}
+
+/* LEGAL PAGES */
+.legal__hero {
+    padding: 120px 20px 40px 20px;
+}
+
+.legal__title {
+    font-size: 42px;
+    line-height: 48px;
+}
+
+.legal__body {
+    padding: 40px 20px;
+}
+
+/* 404 PAGE */
+.not-found {
+    min-height: 100svh;
+    padding: 200px 20px 60px 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-found__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-found__number {
+    font-size: 120px;
+    line-height: 120px;
+    margin-top: 0;
+}
+
+.not-found__label {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.not-found__btn {
+    font-size: 14px;
+    padding: 8px 20px;
+    margin-top: 300px;
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .navbar {
+        padding: 30px 40px;
+    }
+
+    .hero__content {
+        padding: 200px 60px 0 60px;
+    }
+
+    .hero__title {
+        font-size: 52px;
+        line-height: 60px;
+    }
+
+    .about {
+        padding: 60px 40px;
+        gap: 60px;
+    }
+
+    .about__text p {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .services {
+        padding: 0 40px 60px 40px;
+    }
+
+    .cta {
+        padding: 60px 40px;
+        gap: 60px;
+    }
+
+    .prices-grid {
+        padding: 40px;
+    }
+
+    .contacts-info {
+        padding: 60px 40px;
+    }
+
+    .contacts-info__right {
+        width: 400px;
+        height: 300px;
+    }
+
+    footer {
+        padding: 40px;
+    }
+
+    .footer__top {
+        gap: 60px;
+    }
+
+    .footer__columns {
+        gap: 40px;
+    }
+
+    .legal__hero {
+        padding: 180px 40px 60px 40px;
+    }
+
+    .legal__body {
+        padding: 60px 40px;
+    }
+}
 }
