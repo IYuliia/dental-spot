@@ -1232,7 +1232,7 @@ footer {
     .footer__col p,
     .footer__col a {
         line-height: 18px;
-        white-space: normal; /* allow wrapping on mobile — columns are narrow */
+        white-space: normal; 
     }
 
     .footer__bottom {
@@ -1313,6 +1313,7 @@ footer {
 
     .legal__title {
         line-height: 48px;
+        font-size: 34px;
     }
 
     .legal__body {
