@@ -970,10 +970,10 @@ footer {
     width: 118px;
     height: 118px;
     flex-shrink: 0;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 34px;
+    /* font-weight: 500;
     line-height: 24px;
-    padding: 8px;
+    padding: 8px; */
 }
 
 .floating-btn--instagram {
@@ -1005,8 +1005,7 @@ footer {
     .floating-btn--book {
         width: 72px;
         height: 72px;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 34px;
     }
 
     .floating-btn--instagram {

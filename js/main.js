@@ -197,10 +197,10 @@ if (navbar) {
 }
 
 // ===== FLOATING BUTTONS =====
-const floatingBookBtn = document.getElementById('floatingBookBtn');
-if (floatingBookBtn) {
-    floatingBookBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.getElementById('bookingModal').classList.add('is-open');
-    });
-}
+// const floatingBookBtn = document.getElementById('floatingBookBtn');
+// if (floatingBookBtn) {
+//     floatingBookBtn.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         document.getElementById('bookingModal').classList.add('is-open');
+//     });
+// }
