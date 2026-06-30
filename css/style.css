@@ -1290,11 +1290,12 @@ footer {
     }
 
     .cta__subtitle {
-        line-height: 14px;
+        display: none;
+        /* line-height: 14px;
         text-align: left;
         margin-bottom: 0;
         grid-column: 1 / -1;
-        grid-row: 2;
+        grid-row: 2; */
     }
 
     .cta__right {
@@ -1302,10 +1303,11 @@ footer {
     }
 
     .btn--red.cta__btn {
-        padding: 8px 20px;
+        display: none;
+        /* padding: 8px 20px;
         align-self: start;
         grid-column: 2;
-        grid-row: 1;
+        grid-row: 1; */
     }
 
     .cta__right img {

@@ -8,8 +8,8 @@ document.getElementById('modalContainer').innerHTML = `
             <input type="hidden" name="access_key" value="950d30e5-a6d5-48df-b556-68225563b9ba">
             <input type="hidden" name="subject" value="Новий запис — Dental Spot">
             <div class="modal__field">
-                <label for="name">ІМ'Я ТА ПРІЗВИЩЕ</label>
-                <input type="text" id="name" name="name">
+                <label for="name">ІМ'Я ТА ПРІЗВИЩЕ*</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="modal__field">
                 <label for="service">ТИП ЗВЕРНЕННЯ</label>
@@ -33,8 +33,8 @@ document.getElementById('modalContainer').innerHTML = `
                 <input type="email" id="email" name="email">
             </div>
             <div class="modal__field">
-                <label for="phone">НОМЕР ТЕЛЕФОНУ</label>
-                <input type="tel" id="phone" name="phone">
+                <label for="phone">НОМЕР ТЕЛЕФОНУ*</label>
+                <input type="tel" id="phone" name="phone"  required>
             </div>
             <div class="modal__checkbox">
                 <input type="checkbox" id="consent" name="consent">

@@ -27,6 +27,39 @@ document.addEventListener('keydown', (e) => {
 // ===== FORM VALIDATION =====
 const form = document.getElementById('bookingForm');
 
+// function validateForm() {
+//     if (!form) return;
+
+//     const name = form.querySelector('#name');
+//     const service = form.querySelector('#service');
+//     const email = form.querySelector('#email');
+//     const phone = form.querySelector('#phone');
+//     const consent = form.querySelector('#consent');
+//     const submitBtn = form.querySelector('.modal__submit');
+
+//     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+//     const phoneValid = phone.value.replace(/\D/g, '').length >= 10;
+
+//     // Only show red/green if the field has been touched
+//     function markField(el, isValid) {
+//         if (el.value.trim() === '' && !el.classList.contains('touched')) return;
+//         el.classList.toggle('valid', isValid);
+//         el.classList.toggle('invalid', !isValid);
+//     }
+
+//     markField(name, name.value.trim().length > 0);
+//     markField(service, service.value !== '');
+//     markField(email, emailValid);
+//     markField(phone, phoneValid);
+
+//     const allFilled = name.value.trim() && service.value && email.value.trim() && phone.value.trim();
+//     const isValid = allFilled && emailValid && phoneValid && consent.checked;
+
+//     submitBtn.disabled = !isValid;
+//     submitBtn.style.opacity = isValid ? '1' : '0.5';
+//     submitBtn.style.cursor = isValid ? 'pointer' : 'not-allowed';
+// }
+
 function validateForm() {
     if (!form) return;
 
@@ -37,7 +70,7 @@ function validateForm() {
     const consent = form.querySelector('#consent');
     const submitBtn = form.querySelector('.modal__submit');
 
-    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    const emailValid = email.value.trim() === '' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
     const phoneValid = phone.value.replace(/\D/g, '').length >= 10;
 
     // Only show red/green if the field has been touched
@@ -45,15 +78,19 @@ function validateForm() {
         if (el.value.trim() === '' && !el.classList.contains('touched')) return;
         el.classList.toggle('valid', isValid);
         el.classList.toggle('invalid', !isValid);
+
+        if (!isValid && el.value.trim() === '') {
+        el.placeholder = "ОБОВ'ЯЗКОВЕ ПОЛЕ";
+    } else if (el.value.trim() === '') {
+        el.placeholder = '';
+    }
     }
 
     markField(name, name.value.trim().length > 0);
-    markField(service, service.value !== '');
-    markField(email, emailValid);
     markField(phone, phoneValid);
+    
 
-    const allFilled = name.value.trim() && service.value && email.value.trim() && phone.value.trim();
-    const isValid = allFilled && emailValid && phoneValid && consent.checked;
+    const isValid = name.value.trim() && phoneValid && emailValid && consent.checked;
 
     submitBtn.disabled = !isValid;
     submitBtn.style.opacity = isValid ? '1' : '0.5';
