@@ -963,7 +963,7 @@ footer {
 }
 
 .page-prices .floating-btn:hover {
-    background-color: var(--color-navy-dark); 
+    background-color: var(--color-red-hover); 
 }
 
 .floating-btn--book {
