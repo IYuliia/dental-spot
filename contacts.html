@@ -13,6 +13,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W9674NZL');</script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo-red.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-contacts">
@@ -27,7 +28,7 @@
             <a href="index.html" class="navbar__link">ПРО НАС</a>
             <a href="prices.html" class="navbar__link">ЦІНИ</a>
             <a href="contacts.html" class="navbar__link">КОНТАКТИ</a>
-            <button class="btn btn--beige book-online-trigger" id="bookOnlineBtn">Book online</button>
+            <!-- <button class="btn btn--beige book-online-trigger" id="bookOnlineBtn">Book online</button> -->
             <button class="btn btn--grey">UA</button>
         </nav>
        <button class="navbar__burger" id="burgerBtn" aria-label="Відкрити меню">
@@ -60,8 +61,15 @@
         <section class="hero hero--contacts">
             <div class="hero__content">
                 <h1 class="hero__title">ЗВ'ЯЖІТЬСЯ З НАМИ<br>У ЗРУЧНИЙ СПОСІБ</h1>
-                <button class="btn btn--beige book-online-trigger" id="bookOnlineBtn2">Записатись на прийом</button>
+                <button class="btn btn--beige book-online-trigger" id="bookOnlineBtn2">Запис на консультацію</button>
             </div>
+            <!-- FLOATING BUTTONS -->
+<div class="floating-buttons">
+    <a href="#" class="floating-btn floating-btn--book" id="floatingBookBtn">Book online</a>
+    <a href="https://www.instagram.com/dentalspot.clinic?igsh=MTRvZW9wODdnZ2Y2Zg==" target="_blank" rel="noopener" class="floating-btn floating-btn--instagram">
+        <i class="ri-instagram-line"></i>
+    </a>
+</div>
         </section>
 
         <!-- ЧЕКАЄМО НА ВАС -->
@@ -140,6 +148,15 @@
 
 <!-- MODAL -->
     <div id="modalContainer"></div>
+
+<!-- FLOATING BUTTONS -->
+<!-- <div class="floating-buttons">
+    <a href="#" class="floating-btn floating-btn--book" id="floatingBookBtn">Book online</a>
+    <a href="https://www.instagram.com/dentalspot.clinic?igsh=MTRvZW9wODdnZ2Y2Zg==" target="_blank" rel="noopener" class="floating-btn floating-btn--instagram">
+        <i class="ri-instagram-line"></i>
+    </a>
+</div> -->
+
     <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
 </body>

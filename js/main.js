@@ -144,3 +144,26 @@ if (mobileMenuClose) {
         mobileMenu.classList.remove('is-open');
     });
 }
+
+// ===== NAVBAR =====
+const navbar = document.querySelector('.navbar');
+
+if (navbar) {
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY  > 10) {
+            navbar.classList.add('is-scrolled');
+        } else {
+            navbar.classList.remove('is-scrolled');
+        }
+    });
+}
+
+// ===== FLOATING BUTTONS =====
+const floatingBookBtn = document.getElementById('floatingBookBtn');
+if (floatingBookBtn) {
+    floatingBookBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('bookingModal').classList.add('is-open');
+    });
+}

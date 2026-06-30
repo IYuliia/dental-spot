@@ -414,22 +414,30 @@ footer {
 }
 
 /* ===== PRICES PAGE ===== */
-.page-prices {
-    background-image: url('../assets/images/prices-bg.jpg');
-    background-size: 127% auto;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-color: var(--color-beige);
-}
 
-.page-prices main,
-.page-prices footer {
-    background-color: rgba(233, 232, 227, 0.7);
+.page-prices {
+    background-color: var(--color-beige);
 }
 
 .hero--prices {
     background: none;
-    min-height: 100vh;
+    position: relative;
+}
+
+.hero--prices::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/images/hero-bg-prices.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.page-prices main,
+.page-prices footer {
+    background-color: var(--color-beige);
 }
 
 .hero--prices::after {
@@ -471,7 +479,7 @@ footer {
 }
 
 .prices-grid__item {
-    background-color: var(--color-beige);
+    background-color: var(--color-beige-hover);
     padding: 30px 34px;
     display: flex;
     flex-direction: row;
@@ -914,14 +922,119 @@ footer {
     display: flex;
 }
 
+/* ===== FLOATING BUTTONS ===== */
+.floating-buttons {
+    position: absolute;
+    top: calc(100vh - 72px);
+    bottom: 0px;
+    right: 32px;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.floating-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: var(--color-red);
+    color: var(--color-beige);
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.floating-btn:hover {
+    background-color: var(--color-red-hover);
+}
+
+.page-contacts .floating-btn:hover {
+    background-color: var(--color-beige-hover);
+}
+
+.page-prices .floating-btn:hover {
+    background-color: var(--color-navy-dark); 
+}
+
+.floating-btn--book {
+    width: 118px;
+    height: 118px;
+    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px;
+}
+
+.floating-btn--instagram {
+    display:none;
+}
+
+.page-contacts .floating-btn {
+    background-color: var(--color-beige);
+    color: var(--color-red);
+}
+
+.page-prices .floating-btn {
+    background-color: var(--color-navy-mid);
+    color: var(--color-beige);
+}
+
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
+    .floating-buttons {
+        position: fixed;
+        top: auto;
+        bottom: 180px;
+        right: 30px;
+        gap: 12px;
+    }
+
+    .floating-btn--book {
+        width: 72px;
+        height: 72px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .floating-btn--instagram {
+        display: flex;
+        width: 72px;
+        height: 72px;
+        font-size: 34px;
+    }
+
     /* NAVBAR */
+
     .navbar {
         padding: 16px 20px;
         align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar.is-scrolled {
+        background-color: var(--color-navy-dark);
+    }
+
+    .page-prices .navbar.is-scrolled,
+    .page-404 .navbar.is-scrolled {
+        background-color: var(--color-beige-hover);
+    }
+
+    .page-contacts .navbar.is-scrolled {
+        background-color: var(--color-red-hover);
     }
 
     .navbar__logo img {
@@ -1078,7 +1191,7 @@ footer {
     .hero__content .btn--beige,
     .hero__content .btn--navy {
         font-weight: 700;
-        padding: 8px 20px;
+        padding: 12px 20px;
     }
 
     /* ABOUT */
@@ -1248,6 +1361,10 @@ footer {
     }
 
     /* PRICES PAGE */
+    .hero--prices::before {
+    background-image: url('../assets/images/prices-bg.jpg');
+}
+
     .hero--contacts {
         background-position: left center;
     }
