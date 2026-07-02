@@ -5,7 +5,7 @@ document.getElementById('modalContainer').innerHTML = `
         <button class="modal__close" id="modalClose">&times;</button>
         <h2 class="modal__title">[ ПОДБАЙМО<br><span>ПРО ВАШУ УСМІШКУ ]</span></h2>
         <form class="modal__form" id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="950d30e5-a6d5-48df-b556-68225563b9ba">
+            <input type="hidden" name="access_key" value="10f858f5-6e21-4afe-af95-61baf7f6ae89">
             <input type="hidden" name="subject" value="Новий запис — Dental Spot">
             <div class="modal__field">
                 <label for="name">ІМ'Я ТА ПРІЗВИЩЕ*</label>

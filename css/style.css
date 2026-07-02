@@ -997,22 +997,22 @@ footer {
     .floating-buttons {
         position: fixed;
         top: auto;
-        bottom: 180px;
+        bottom: 68px;
         right: 30px;
         gap: 12px;
     }
 
     .floating-btn--book {
-        width: 72px;
-        height: 72px;
-        font-size: 34px;
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
     }
 
     .floating-btn--instagram {
         display: flex;
-        width: 72px;
-        height: 72px;
-        font-size: 34px;
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
     }
 
     /* NAVBAR */
@@ -1183,8 +1183,9 @@ footer {
 
     .hero__content {
         padding: 120px 20px 70px 20px;
-        justify-content: space-between;
+        justify-content: flex-start;
         min-height: 100svh;
+        gap: 60px;
     }
 
     .hero__title {
